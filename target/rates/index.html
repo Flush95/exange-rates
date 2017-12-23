@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Exchange Rates</title>
+        <link rel="icon" href="img/search.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <link rel="stylesheet" href="./Bootswatch_ Solar_files/bootstrap.css" media="screen">
+    <link rel="stylesheet" href="./Bootswatch_ Solar_files/custom.min.css">
+
+        <link href="css/style.css" rel="stylesheet">
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../bower_components/html5shiv/dist/html5shiv.js"></script>
+      <script src="../bower_components/respond/dest/respond.min.js"></script>
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="../../js/main.js"></script>
+
+    <![endif]-->
+
+	</head>
+  <body style="">
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand">Exchange Rates</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="index.html#homeTop" id="themes">Home</a>
+            </li>
+            <li>
+              <a href="index.html#ratesByDate">Rates</a>
+            </li>
+            <li>
+              <a href="index.html#converter">Converter</a>
+            </li>
+			<li>
+              <a href="index.html#chart">Charts</a>
+            </li>
+              <li>
+                  <a href="index.html#prediction">Prediction</a>
+              </li>
+			<li>
+              <a href="index.html#about">About</a>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+    <div id="notifyWrapper">
+        <div id="snackbar"></div>
+    </div>
+
+    <div class="container mainBlocks" id="homeTop">
+      <div class="page-header" id="banner">
+        <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <h1>Exchange Rates</h1>
+            <p class="lead">Enjoy these opportunities</p>
+          </div>
+            <div class="col-lg-6">
+
+                <div class="col-lg-12">
+                    <label class="col-lg-5 hotCurrencyLabel">From Currency</label>
+                    <div class="col-lg-7 group">
+                        <select id="fruFrom">
+                            <option value="0">UAH (Ukrainian Hryvnia)</option>
+                            <option value="1">EUR (Euro)</option>
+                            <option value="2">AUD (Australian $)</option>
+                            <option value="3">BGN (Bulgarian New Lion)</option>
+                            <option value="4">BRL (Brazilian Real)</option>
+                            <option value="5">CAD (Canadian Dollar)</option>
+                            <option value="6">CHF (Swiss Frank)</option>
+
+                            <option value="7">CNY (China)</option>
+                            <option value="8">CZK (Czech Crown)</option>
+                            <option value="9">DKK (Danish Crown)</option>
+                            <option value="10">GBP (English Pound Sterling)</option>
+                            <option value="11">HKD (Hong Kong Dollar)</option>
+
+                            <option value="12">HRK (Croatian Kune)</option>
+                            <option value="13">HUF (Hungarian Forint)</option>
+                            <option value="14">IDR (Indonesian Rupiah)</option>
+                            <option value="15">ILS (Israeli New Shekel)</option>
+                            <option value="16">INR (Indian rupee)</option>
+
+                            <option value="17">JPY (Japanese Yen)</option>
+                            <option value="18">KRW (South Korean Won)</option>
+                            <option value="19">MXN (Mexican Peso)</option>
+                            <option value="20">MYR (Malaysian Ringgit)</option>
+                            <option value="21">NOK (Norwegian Crown)</option>
+
+                            <option value="22">NZD (New Zealand Dollar)</option>
+                            <option value="23">PHP (Philippine Peso)</option>
+                            <option value="24">PLN (Polish Zloty)</option>
+                            <option value="25">RON (Romanian Lei)</option>
+                            <option value="26">RUB (Russian Ruble)</option>
+
+                            <option value="27">SEK (Swedish Crown)</option>
+                            <option value="28">SGD (Singapore Dollar)</option>
+                            <option value="29">THB (Thai Baht)</option>
+                            <option value="30">TRY (New Turkish Lira)</option>
+                            <option value="31">USD (U.S. Dollar)</option>
+                            <option value="32">ZAR (South African Rand)</option>
+                        </select>
+                        <span class="highlight"></span>
+                        <span class="bar ratesByDatesBar"></span>
+                    </div>
+                    <script src="js/secondStorage.js"></script>
+                </div>
+                <div class="col-lg-12">
+                    <label class="col-lg-5 hotCurrencyLabel">To Currency</label>
+                    <div class="col-lg-7 group">
+                        <select id="fru">
+                            <option value="0">UAH (Ukrainian Hryvnia)</option>
+                            <option value="1">EUR (Euro)</option>
+                            <option value="2">AUD (Australian $)</option>
+                            <option value="3">BGN (Bulgarian New Lion)</option>
+                            <option value="4">BRL (Brazilian Real)</option>
+                            <option value="5">CAD (Canadian Dollar)</option>
+                            <option value="6">CHF (Swiss Frank)</option>
+
+                            <option value="7">CNY (China)</option>
+                            <option value="8">CZK (Czech Crown)</option>
+                            <option value="9">DKK (Danish Crown)</option>
+                            <option value="10">GBP (English Pound Sterling)</option>
+                            <option value="11">HKD (Hong Kong Dollar)</option>
+
+                            <option value="12">HRK (Croatian Kune)</option>
+                            <option value="13">HUF (Hungarian Forint)</option>
+                            <option value="14">IDR (Indonesian Rupiah)</option>
+                            <option value="15">ILS (Israeli New Shekel)</option>
+                            <option value="16">INR (Indian rupee)</option>
+
+                            <option value="17">JPY (Japanese Yen)</option>
+                            <option value="18">KRW (South Korean Won)</option>
+                            <option value="19">MXN (Mexican Peso)</option>
+                            <option value="20">MYR (Malaysian Ringgit)</option>
+                            <option value="21">NOK (Norwegian Crown)</option>
+
+                            <option value="22">NZD (New Zealand Dollar)</option>
+                            <option value="23">PHP (Philippine Peso)</option>
+                            <option value="24">PLN (Polish Zloty)</option>
+                            <option value="25">RON (Romanian Lei)</option>
+                            <option value="26">RUB (Russian Ruble)</option>
+
+                            <option value="27">SEK (Swedish Crown)</option>
+                            <option value="28">SGD (Singapore Dollar)</option>
+                            <option value="29">THB (Thai Baht)</option>
+                            <option value="30">TRY (New Turkish Lira)</option>
+                            <option value="31">USD (U.S. Dollar)</option>
+                            <option value="32">ZAR (South African Rand)</option>
+                        </select>
+                        <span class="highlight"></span>
+                        <span class="bar ratesByDatesBar"></span>
+                    </div>
+                    <script src="js/session.js"></script>
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+          <!--<div class="col-lg-3 col-md-3 col-sm-4">
+            <div class="list-group table-of-contents">
+              <a class="list-group-item" href="#">HOME</a>
+              <a class="list-group-item" href="index.html#ratesByDate">Rates By Date (choosing symbols)</a>
+              <a class="list-group-item" href="index.html#converter">Currency Converter</a>
+              <a class="list-group-item" href="index.html#chart">Charts</a>
+              <a class="list-group-item" href="index.html#prediction">Prediction</a>
+              <a class="list-group-item" href="index.html#about">About</a>
+            </div>
+          </div>-->
+		  <div class="col-lg-12 col-md-12 col-sm-12" id="startTable" style="border-bottom: 2px solid #FFFFFF;">
+
+			  <script id="currentCurrenciesScript" type="text/template">
+                  <div class="col-lg-6 text-center">
+                    <b><%= data[0].toCurrency %></b> rate for today is
+                    <b><%= data[0].price %></b>
+                  </div>
+                  <div class="col-lg-6 text-center">
+                      Difference between yesterday value is <b><%= data[0].priceSold %></b>
+                  </div>
+			  </script>
+		  </div>
+            <div class="col-lg-3 leftBlock"></div>
+            <!-- Hot Chart -->
+            <div class="col-lg-6">
+                <div class="col-lg-12" id="hotGraph-container">
+                    <div id="hotChartDiv">
+                        <canvas id="hotMyChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 rightBlock"></div>
+
+
+
+        </div>
+      </div>
+    </div>
+      <!-- Rates By Date
+      ================================================== -->
+      <div class="bs-docs-section clearfix byDateSection" id="ratesByDate">
+        <div class="row">
+            <div class="container mainBlocks">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h2 style="font-size: 60px;">Rate By Date</h2>
+            </div>
+			  <div class="col-md-4 col-lg-4">
+
+				  <form name="ratesByDateForm" id="ratesByDateForm" class="form-horizontal">
+					  <fieldset>
+                          <div class="group">
+                              <select name="selectBaseCurrency" id="selectBaseCurrency" class="byDateInputs" required>
+                                  <option></option>
+                                  <option>UAH (Ukrainian Hryvnia)</option>
+                                  <option>EUR (Euro)</option>
+                                  <option>AUD (Australian $)</option>
+                                  <option>BGN (Bulgarian New Lion)</option>
+                                  <option>BRL (Brazilian Real)</option>
+                                  <option>CAD (Canadian Dollar)</option>
+                                  <option>CHF (Swiss Frank)</option>
+
+                                  <option>CNY (China)</option>
+                                  <option>CZK (Czech Crown)</option>
+                                  <option>DKK (Danish Crown)</option>
+                                  <option>GBP (English Pound Sterling)</option>
+                                  <option>HKD (Hong Kong Dollar)</option>
+
+                                  <option>HRK (Croatian Kune)</option>
+                                  <option>HUF (Hungarian Forint)</option>
+                                  <option>IDR (Indonesian Rupiah)</option>
+                                  <option>ILS (Israeli New Shekel)</option>
+                                  <option>INR (Indian rupee)</option>
+
+                                  <option>JPY (Japanese Yen)</option>
+                                  <option>KRW (South Korean Won)</option>
+                                  <option>MXN (Mexican Peso)</option>
+                                  <option>MYR (Malaysian Ringgit)</option>
+                                  <option>NOK (Norwegian Crown)</option>
+
+                                  <option>NZD (New Zealand Dollar)</option>
+                                  <option>PHP (Philippine Peso)</option>
+                                  <option>PLN (Polish Zloty)</option>
+                                  <option>RON (Romanian Lei)</option>
+                                  <option>RUB (Russian Ruble)</option>
+
+                                  <option>SEK (Swedish Crown)</option>
+                                  <option>SGD (Singapore Dollar)</option>
+                                  <option>THB (Thai Baht)</option>
+                                  <option>TRY (New Turkish Lira)</option>
+                                  <option>USD (U.S. Dollar)</option>
+                                  <option>ZAR (South African Rand)</option>
+                              </select>
+                              <span class="highlight"></span>
+                              <span class="bar ratesByDatesBar"></span>
+                              <label class="byDateFontSection">Base Rate</label>
+                          </div>
+
+                          <div class="group">
+                              <input type="text" name="currenciesByDate" class="byDateInputs" required>
+                              <span class="highlight"></span>
+                              <span class="bar"></span>
+                              <label class="byDateFontSection">Rates(EUR,USD,BGN...)</label>
+                          </div>
+
+                            <div class="group">
+                                <input type="date" name="inputDate" class="byDateInputs" required>
+                                <span class="highlight"></span>
+                                <span class="bar"></span>
+                                <label class="byDateFontSection labelDate">Date</label>
+                            </div>
+                          <button type="reset" class="btn byDateCancelButton"><span>Cancel</span></button>
+                          <button type="submit" class="btn byDateSubmitButton" id="sendByDate"><span>SUBMIT</span></button>
+					  </fieldset>
+                  </form>
+
+			  </div>
+
+              <script>
+                  function searchFunction(inputName, tableName) {
+                      var input, filter, table, tr, td, i;
+                      input = document.getElementById(inputName);
+                      filter = input.value.toUpperCase();
+                      table = document.getElementById(tableName);
+                      tr = table.getElementsByTagName("tr");
+
+                      // Loop through all table rows, and hide those who don't match the search query
+                      for (i = 0; i < tr.length; i++) {
+                          td = tr[i].getElementsByTagName("td")[2];
+                          if (td) {
+                              if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+                                  tr[i].style.display = "";
+                              } else {
+                                  tr[i].style.display = "none";
+                              }
+                          }
+                      }
+                  }
+              </script>
+                  <script id="byDateCurrenciesScript" type="text/template">
+                      <table class="table table-hover" id="dateTable">
+                          <p class="lead">Currencies</p>
+                          <thead>
+                          <tr>
+                              <th>#</th>
+                              <th>Base Currency</th>
+                              <th>To Currency</th>
+                              <th>Date</th>
+                              <th>Price</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <% var i = 1; %>
+                          <% data.forEach(function(item) { %>
+                          <tr>
+                              <td><%= i++ %></td>
+                              <td><%= item.baseCurrencyName %></td>
+                              <td><%= item.toCurrency %></td>
+                              <td><%= item.date %></td>
+                              <td><%= item.price %></td>
+                          </tr>
+                          <% }); %>
+                          </tbody>
+                      </table>
+                  </script>
+              <div class="col-md-8 col-lg-8">
+                  <div class="searchByDate" hidden>
+                      <div class="col-lg-2">
+                          <img src="/img/search.png" class="searchGlyphicon">
+                      </div>
+                      <div class="col-lg-10">
+                          <div class="group">
+                              <input type="text" id="searchInput" class="byDateInputs" onkeyup="searchFunction('searchInput', 'dateTable')" required>
+                              <span class="highlight"></span>
+                              <span class="bar"></span>
+                              <label class="byDateFontSection">Search for names..</label>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-12 col-lg-12" id="byDate">
+
+                  </div>
+                  <div class="col-lg-12 wrapp" hidden>
+                      <div class="spinner">
+                          <div class="rect1"></div>
+                          <div class="rect2"></div>
+                          <div class="rect3"></div>
+                          <div class="rect4"></div>
+                          <div class="rect5"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+	  <!-- Converter
+      ================================================== -->
+      <div class="bs-docs-section clearfix converterSection" id="converter">
+        <div class="row">
+            <div class="container mainBlocks">
+                <div class="col-lg-12">
+                    <div class="page-header">
+                      <h2 style="font-size: 60px;">Converter</h2>
+                    </div>
+                    <div class="col-lg-12" style="border-bottom: 1px solid #073642">
+                        <form name="converterForm" id="converterForm" class="form-horizontal">
+                          <fieldset>
+                              <div class="col-sm-6 col-md-6 col-lg-6">
+                                  <div class="group">
+                                      <select name="converterCurrency" id="converterCurrency" class="converterInputs" required>
+                                          <option></option>
+                                          <option>UAH (Ukrainian Hryvnia)</option>
+                                          <option>EUR (Euro)</option>
+                                          <option>AUD (Australian $)</option>
+                                          <option>BGN (Bulgarian New Lion)</option>
+                                          <option>BRL (Brazilian Real)</option>
+                                          <option>CAD (Canadian Dollar)</option>
+                                          <option>CHF (Swiss Frank)</option>
+
+                                          <option>CNY (China)</option>
+                                          <option>CZK (Czech Crown)</option>
+                                          <option>DKK (Danish Crown)</option>
+                                          <option>GBP (English Pound Sterling)</option>
+                                          <option>HKD (Hong Kong Dollar)</option>
+
+                                          <option>HRK (Croatian Kune)</option>
+                                          <option>HUF (Hungarian Forint)</option>
+                                          <option>IDR (Indonesian Rupiah)</option>
+                                          <option>ILS (Israeli New Shekel)</option>
+                                          <option>INR (Indian rupee)</option>
+
+                                          <option>JPY (Japanese Yen)</option>
+                                          <option>KRW (South Korean Won)</option>
+                                          <option>MXN (Mexican Peso)</option>
+                                          <option>MYR (Malaysian Ringgit)</option>
+                                          <option>NOK (Norwegian Crown)</option>
+
+                                          <option>NZD (New Zealand Dollar)</option>
+                                          <option>PHP (Philippine Peso)</option>
+                                          <option>PLN (Polish Zloty)</option>
+                                          <option>RON (Romanian Lei)</option>
+                                          <option>RUB (Russian Ruble)</option>
+
+                                          <option>SEK (Swedish Crown)</option>
+                                          <option>SGD (Singapore Dollar)</option>
+                                          <option>THB (Thai Baht)</option>
+                                          <option>TRY (New Turkish Lira)</option>
+                                          <option>USD (U.S. Dollar)</option>
+                                          <option>ZAR (South African Rand)</option>
+                                      </select>
+                                      <span class="highlight"></span>
+                                      <span class="bar converterBar"></span>
+                                      <label class="converterFontSection">From</label>
+                                </div>
+                                  <div class="group">
+                                      <select name="toRates" id="toRates" class="converterInputs" required>
+                                          <option></option>
+                                          <option>UAH (Ukrainian Hryvnia)</option>
+                                          <option>EUR (Euro)</option>
+                                          <option>AUD (Australian $)</option>
+                                          <option>BGN (Bulgarian New Lion)</option>
+                                          <option>BRL (Brazilian Real)</option>
+                                          <option>CAD (Canadian Dollar)</option>
+                                          <option>CHF (Swiss Frank)</option>
+
+                                          <option>CNY (China)</option>
+                                          <option>CZK (Czech Crown)</option>
+                                          <option>DKK (Danish Crown)</option>
+                                          <option>GBP (English Pound Sterling)</option>
+                                          <option>HKD (Hong Kong Dollar)</option>
+
+                                          <option>HRK (Croatian Kune)</option>
+                                          <option>HUF (Hungarian Forint)</option>
+                                          <option>IDR (Indonesian Rupiah)</option>
+                                          <option>ILS (Israeli New Shekel)</option>
+                                          <option>INR (Indian rupee)</option>
+
+                                          <option>JPY (Japanese Yen)</option>
+                                          <option>KRW (South Korean Won)</option>
+                                          <option>MXN (Mexican Peso)</option>
+                                          <option>MYR (Malaysian Ringgit)</option>
+                                          <option>NOK (Norwegian Crown)</option>
+
+                                          <option>NZD (New Zealand Dollar)</option>
+                                          <option>PHP (Philippine Peso)</option>
+                                          <option>PLN (Polish Zloty)</option>
+                                          <option>RON (Romanian Lei)</option>
+                                          <option>RUB (Russian Ruble)</option>
+
+                                          <option>SEK (Swedish Crown)</option>
+                                          <option>SGD (Singapore Dollar)</option>
+                                          <option>THB (Thai Baht)</option>
+                                          <option>TRY (New Turkish Lira)</option>
+                                          <option>USD (U.S. Dollar)</option>
+                                          <option>ZAR (South African Rand)</option>
+                                      </select>
+                                      <span class="highlight"></span>
+                                      <span class="bar converterBar"></span>
+                                      <label class="converterFontSection">To</label>
+                                  </div>
+                                  <button type="submit" class="btn converterSubmitButton" id="sendConverter"><span>SUBMIT</span></button>
+                              </div>
+                              <div class="col-sm-6 col-md-6 col-lg-6">
+                                  <div class="group">
+                                      <input type="date" name="converterDate" class="converterDate" id="converterDate" required>
+                                      <span class="highlight"></span>
+                                      <span class="bar converterBar"></span>
+                                      <label class="byDateFontSection labelDate">Date</label>
+                                  </div>
+                                  <div class="group">
+                                      <input type="text" name="inputQuantity" class="converterInputs" id="inputQuantity" required>
+                                      <span class="highlight"></span>
+                                      <span class="bar converterBar"></span>
+                                      <label class="converterFontSection">Quantity(100)</label>
+                                  </div>
+                                  <button type="reset" class="btn converterCancelButton"><span>Cancel</span></button>
+                              </div>
+                          </fieldset>
+                        </form>
+
+                    </div>
+                  <script id="converterScript" type="text/template">
+                      <table class="table table-bordered text-center table-hover" id="converterTable">
+                          <thead>
+                          <tr>
+                              <th>#</th>
+                              <th>From</th>
+                              <th>To </th>
+                              <th>Date</th>
+                              <th>Price</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                          <% var i = 1; %>
+                          <% data.forEach(function(item) { %>
+                          <tr>
+                              <td><%= i++ %></td>
+                              <td><%= item.baseCurrencyName %></td>
+                              <td><%= item.toCurrency %></td>
+                              <td><%= item.date %></td>
+                              <td><%= item.price %></td>
+                          </tr>
+                          <% }); %>
+                          </tbody>
+                      </table>
+                  </script>
+                  <div class="col-lg-12">
+                      <div class="searchInConverter" hidden>
+
+                      </div>
+                      <div class="col-lg-12" id="byConverter">
+                      </div>
+
+                      <div class="spinner spinnerConverter" hidden>
+                          <div class="rect1"></div>
+                          <div class="rect2"></div>
+                          <div class="rect3"></div>
+                          <div class="rect4"></div>
+                          <div class="rect5"></div>
+                      </div>
+                  </div>
+              </div>
+            </div>
+        </div>
+      </div>
+
+
+    <!-- Chart
+      ================================================== -->
+        <div class="bs-docs-section chartSection" id="chart">
+            <div class="row">
+                <div class="container mainBlocks">
+                <div class="col-lg-12">
+                    <div class="page-header">
+                        <h1>Chart</h1>
+                    </div>
+                    <div class="col-lg-12">
+                        <form name="chartForm" id="chartForm" class="form-horizontal">
+                            <fieldset>
+                                <div class="col-lg-12">
+                                    <div class="col-sm-12 col-md-12 col-lg-4">
+                                        <div class="group">
+                                            <select name="baseChartCurrency" id="baseChartCurrency" class="chartInputs" required>
+                                                <option></option>
+                                                <option>UAH (Ukrainian Hryvnia)</option>
+                                                <option>EUR (Euro)</option>
+                                                <option>AUD (Australian $)</option>
+                                                <option>BGN (Bulgarian New Lion)</option>
+                                                <option>BRL (Brazilian Real)</option>
+                                                <option>CAD (Canadian Dollar)</option>
+                                                <option>CHF (Swiss Frank)</option>
+
+                                                <option>CNY (China)</option>
+                                                <option>CZK (Czech Crown)</option>
+                                                <option>DKK (Danish Crown)</option>
+                                                <option>GBP (English Pound Sterling)</option>
+                                                <option>HKD (Hong Kong Dollar)</option>
+
+                                                <option>HRK (Croatian Kune)</option>
+                                                <option>HUF (Hungarian Forint)</option>
+                                                <option>IDR (Indonesian Rupiah)</option>
+                                                <option>ILS (Israeli New Shekel)</option>
+                                                <option>INR (Indian rupee)</option>
+
+                                                <option>JPY (Japanese Yen)</option>
+                                                <option>KRW (South Korean Won)</option>
+                                                <option>MXN (Mexican Peso)</option>
+                                                <option>MYR (Malaysian Ringgit)</option>
+                                                <option>NOK (Norwegian Crown)</option>
+
+                                                <option>NZD (New Zealand Dollar)</option>
+                                                <option>PHP (Philippine Peso)</option>
+                                                <option>PLN (Polish Zloty)</option>
+                                                <option>RON (Romanian Lei)</option>
+                                                <option>RUB (Russian Ruble)</option>
+
+                                                <option>SEK (Swedish Crown)</option>
+                                                <option>SGD (Singapore Dollar)</option>
+                                                <option>THB (Thai Baht)</option>
+                                                <option>TRY (New Turkish Lira)</option>
+                                                <option>USD (U.S. Dollar)</option>
+                                                <option>ZAR (South African Rand)</option>
+                                            </select>
+                                            <span class="highlight"></span>
+                                            <span class="bar chartBar"></span>
+                                            <label class="chartFontSection labelDate">Base Currency</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-4">
+                                        <div class="group">
+                                            <select name="toChartCurrency" id="toChartCurrency" class="chartInputs" required>
+                                                <option></option>
+                                                <option>UAH (Ukrainian Hryvnia)</option>
+                                                <option>EUR (Euro)</option>
+                                                <option>AUD (Australian $)</option>
+                                                <option>BGN (Bulgarian New Lion)</option>
+                                                <option>BRL (Brazilian Real)</option>
+                                                <option>CAD (Canadian Dollar)</option>
+                                                <option>CHF (Swiss Frank)</option>
+
+                                                <option>CNY (China)</option>
+                                                <option>CZK (Czech Crown)</option>
+                                                <option>DKK (Danish Crown)</option>
+                                                <option>GBP (English Pound Sterling)</option>
+                                                <option>HKD (Hong Kong Dollar)</option>
+
+                                                <option>HRK (Croatian Kune)</option>
+                                                <option>HUF (Hungarian Forint)</option>
+                                                <option>IDR (Indonesian Rupiah)</option>
+                                                <option>ILS (Israeli New Shekel)</option>
+                                                <option>INR (Indian rupee)</option>
+
+                                                <option>JPY (Japanese Yen)</option>
+                                                <option>KRW (South Korean Won)</option>
+                                                <option>MXN (Mexican Peso)</option>
+                                                <option>MYR (Malaysian Ringgit)</option>
+                                                <option>NOK (Norwegian Crown)</option>
+
+                                                <option>NZD (New Zealand Dollar)</option>
+                                                <option>PHP (Philippine Peso)</option>
+                                                <option>PLN (Polish Zloty)</option>
+                                                <option>RON (Romanian Lei)</option>
+                                                <option>RUB (Russian Ruble)</option>
+
+                                                <option>SEK (Swedish Crown)</option>
+                                                <option>SGD (Singapore Dollar)</option>
+                                                <option>THB (Thai Baht)</option>
+                                                <option>TRY (New Turkish Lira)</option>
+                                                <option>USD (U.S. Dollar)</option>
+                                                <option>ZAR (South African Rand)</option>
+                                            </select>
+                                            <span class="highlight"></span>
+                                            <span class="bar chartBar"></span>
+                                            <label class="chartFontSection">To Rate</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-4">
+                                        <button type="reset" class="btn chartButton"><span>Cancel</span></button>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="col-sm-12 col-md-12 col-lg-4">
+                                        <div class="group">
+                                            <input type="date" name="firstChartDate" class="chartInputs" required>
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label class="chartFontSection labelDate">First Date</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-4">
+                                        <div class="group">
+                                            <input type="date" name="secondChartDate" class="chartInputs" required>
+                                            <span class="highlight"></span>
+                                            <span class="bar"></span>
+                                            <label class="chartFontSection labelDate">Second Date</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-4">
+                                        <button type="submit" class="btn chartButton" id="sendChart"><span>SUBMIT</span></button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="col-lg-12" id="graph-container">
+                            <div id="chartDiv">
+                                <canvas id="myChart"></canvas>
+                            </div>
+
+                            <div class="spinner spinnerChart" hidden>
+                                <div class="rect1"></div>
+                                <div class="rect2"></div>
+                                <div class="rect3"></div>
+                                <div class="rect4"></div>
+                                <div class="rect5"></div>
+                            </div>
+
+                            <div class="col-lg-12 chipsBlock">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+
+
+    <!-- Prediction
+          ================================================== -->
+    <div class="bs-docs-section predictionSection" id="prediction">
+        <div class="row">
+            <div class="container mainBlocks">
+                <div class="col-lg-12">
+                    <div class="page-header">
+                        <h1>Prediction</h1>
+                        <h2>is based on nonlinear regression (power and exponential regression) and dynamics indicators</h2>
+                        <h3>is made on the basis of 12 months and provides data for 3 months in advance</h3>
+                        <h4>Base currency: UAH. Available prediction for next currencies: EUR, USD, GBP, RUB.</h4>
+                    </div>
+                    <div class="col-lg-4">
+                        <form name="predictionForm" id="predictionForm" class="form-horizontal">
+                            <fieldset>
+                                <div class="col-lg-12">
+                                    <div class="group">
+                                        <select name="typeOfPrediction" id="typeOfPrediction" class="predictionInputs" required>
+                                            <option>Non-Linear Regression</option>
+                                            <option>Dynamics Indicators</option>
+                                        </select>
+                                        <span class="highlight"></span>
+                                        <span class="bar predictionBar"></span>
+                                        <label class="predictionFontSection">Choose algorithm for currency prediction</label>
+                                    </div>
+                                    <div class="group">
+                                        <select name="predictionCurrency" id="predictionCurrency" class="predictionInputs" required>
+                                            <option>EUR</option>
+                                            <option>USD</option>
+                                            <option>GBP</option>
+                                            <option>RUB</option>
+                                        </select>
+                                        <!--<input type="text" name="predictionCurrency" class="predictionInputs" required>-->
+                                        <span class="highlight"></span>
+                                        <span class="bar predictionBar"></span>
+                                        <label class="predictionFontSection">To Rate</label>
+                                    </div>
+                                    <button type="submit" class="btn predictionSubmitButton" id="sendPrediction"><span>Predict</span></button>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="col-lg-8">
+                        <script id="predictionScript" type="text/template">
+                            <table class="table text-center table-hover" id="predictionTable">
+                                <thead>
+                                <tr>
+                                    <th>Period</th>
+                                    <th>Value</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <% var i = 1; %>
+                                <% data.forEach(function(item) { %>
+                                    <tr>
+                                        <td><%= item.period %></td>
+                                        <td><%= item.value %></td>
+                                    </tr>
+                                <% }); %>
+                                </tbody>
+                            </table>
+                        </script>
+                        <div class="col-lg-12" id="predictionContainer">
+                            <div id="predictionBlock">
+                            </div>
+
+                            <div id="loader-container" class="loaderSection" hidden>
+                                <p id="loadingText">prediction</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+      <!-- About
+      ================================================== -->
+      <div class="bs-docs-section" id="about">
+        <div class="row">
+            <div class="container mainBlocks">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1>About</h1>
+            </div>
+              <div class="jumbotron">
+                  <p style="text-align: center;">ATTENTION</p>
+                  <p style="text-align: center;">We are not responsible for the damage caused by data from our site.</p>
+                  <p style="text-align: center;">Use all data at your own peril and risk.</p>
+              </div>
+          </div>
+                <div class="col-lg-4">
+                    <div class="list-group">
+                        <a class="list-group-item active">
+                            Used programming and markup languages
+                        </a>
+                        <a class="list-group-item">
+                            <span class="badge">59%</span>
+                            Java
+                        </a>
+                        <a class="list-group-item">
+                            <span class="badge">27%</span>
+                            JavaScript
+                        </a>
+                        <a class="list-group-item">
+                            <span class="badge">14%</span>
+                            Other (HTML5, CSS3)
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="list-group">
+                        <a class="list-group-item active">
+                            Used technologies and frameworks
+                        </a>
+                        <a class="list-group-item">
+                            MAVEN
+                        </a>
+                        <a class="list-group-item">
+                            GIT
+                        </a>
+                        <a class="list-group-item">
+                            JQUERY
+                        </a>
+                        <a class="list-group-item">
+                            Ajax
+                        </a>
+                        <a class="list-group-item">
+                            Bootstrap v3
+                        </a>
+                        <a class="list-group-item">
+                            Underscore
+                        </a>
+                        <a class="list-group-item">
+                            Chart.js
+                        </a>
+                        <a class="list-group-item">
+                            RestFull Web Services (jersey)
+                        </a>
+                        <a class="list-group-item">
+                            JSON
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="list-group">
+                        <a class="list-group-item active">
+                            Used API
+                        </a>
+                        <a class="list-group-item">
+                            MinFin API
+                        </a>
+                        <a class="list-group-item">
+                            Fixer.io API
+                        </a>
+                        <a class="list-group-item">
+                            V3.ExchangeRate API
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-12">
+                    <footer>
+                        <div class="row">
+                            <div class="col-lg-12">
+
+                                <ul class="list-unstyled">
+                                    <li class="pull-right"><a href="index.html#top">Back to top</a></li>
+                                    <li><a href="https://www.instagram.com/emilianburla/">Instagram</a></li>
+                                    <li><a href="https://www.facebook.com/profile.php?id=100011139099245">Facebook</a></li>
+                                    <li><a href="">Twitter</a></li>
+                                    <li><a href="https://github.com/Flush95/">GitHub</a></li>
+                                    <li><a href="https://vk.com/milio">Vk</a></li>
+                                </ul>
+                                <p>Made by Emilian Burla. Contact me at <a href="mailto:b.emilian7@gmail.com">b.emilian7@gmail.com</a>.</p>
+                            </div>
+                        </div>
+
+                    </footer>
+                </div>
+        </div>
+        
+      </div>
+
+
+      </div>
+
+    </div>
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore.js"></script>
+	<script src="../../js/main.js"></script>
+    <script src="./Bootswatch_ Solar_files/bootstrap.min.js"></script>
+    <script src="./Bootswatch_ Solar_files/custom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+</body>
+</html>

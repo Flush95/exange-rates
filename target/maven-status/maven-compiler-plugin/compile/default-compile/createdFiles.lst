@@ -1,0 +1,7 @@
+com\flush\DiplomaProject\entities\ProfitabilityThresholdEntity.class
+com\flush\DiplomaProject\entities\MinimumMarginEntity.class
+com\flush\DiplomaProject\services\BreakevenPointService.class
+com\flush\DiplomaProject\services\ProfitabilityThresholdService.class
+com\flush\DiplomaProject\entities\BreakevenPointEntity.class
+com\flush\DiplomaProject\MyResource.class
+com\flush\DiplomaProject\services\MinimumMarginService.class

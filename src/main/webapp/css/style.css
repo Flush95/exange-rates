@@ -1,0 +1,651 @@
+.chart {
+    width: 100%;
+    height: auto;
+}
+.row {
+    margin-right: 0;
+}
+.submitButtons {
+    width: 100%;
+}
+.cancelButtons {
+    width: 100%;
+}
+.bs-docs-section {
+    margin-top: 0px;
+}
+.mainBlocks {
+    min-height: 100vh;
+    height: 100%;
+}
+.searchGlyphicon {
+    width: 70px;
+}
+
+
+#fru {
+    border-bottom: 3px solid #FFFFFF;
+    background: #002b36;
+    color: #FFFFFF;
+    font-size:15px;
+}
+
+#fruFrom {
+    border-bottom: 3px solid #FFFFFF;
+    background: #002b36;
+    color: #FFFFFF;
+    font-size:15px;
+}
+
+.hotCurrencyLabel {
+    color: #FFFFFF;
+}
+
+#converterTable {
+
+}
+
+b {
+    font-size: 4em;
+}
+
+.difference {
+    font-size: 1.5em;
+}
+
+b {
+    color: #FFDC00;
+}
+
+sub {
+    font-size: 2em;
+}
+
+#converterTable th {
+    text-align: center;
+}
+
+#predictionTable th {
+    text-align: center;
+}
+
+#converterTable tr:hover {
+    background: #3D9970;
+}
+
+#predictionTable tr:hover {
+    background: #001F3F;
+    color: #FF4136;
+}
+
+#converterTable thead {
+    background: #073642;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+#byConverter {
+    margin-bottom: 5%;
+}
+
+.searchInConverter {
+    margin-top: 5%;
+}
+
+/***********CHART SECTION***********/
+.chartSection {
+    background-color: #111111;
+    color: #0074D9;
+}
+.submitChart {
+    border-radius: 0;
+    background: #111111;
+    border: 0;
+    border-bottom: 3px solid #FFFFFF;
+}
+.submitChart:hover {
+    background: #111111;
+}
+.chartFontSection {
+    color: #0074D9;
+}
+.chartInputs {
+    border-bottom: 3px solid #0074D9;
+    background: #111111;
+}
+/*************************************/
+
+
+/***********PREDICTION SECTION***********/
+.predictionSection {
+    background-color: #FF4136;
+    color: #001F3F;
+}
+.predictionFontSection {
+    color: #001F3F;
+}
+.predictionInputs {
+    border-bottom: 3px solid #001F3F;
+    background: #FF4136;
+}
+.predictionSubmitButton {
+    background: #FF4136;
+    color: #001F3F;
+}
+.predictionSubmitButton:hover, .predictionSubmitButton:focus {
+    background: #001F3F;
+    color: #FF4136;
+}
+/*************************************/
+
+
+/***********BY DATE SECTION***********/
+.byDateSection {
+    background-color: #001F3F;
+    color: #FFFFFF;
+}
+.submitByDate {
+    border-radius: 0;
+    background: #001F3F;
+    border: 0;
+    border-bottom: 3px solid #FFFFFF;
+    width: 300px;
+}
+.submitByDate:hover {
+    background: #001F3F;
+}
+.byDateFontSection {
+    color: #FFFFFF;
+    font-size:15px;
+}
+.byDateInputs {
+    border-bottom: 3px solid #FFFFFF;
+    background: #001F3F;
+    font-size:15px;
+}
+.byDateSubmitButton {
+    background: #001F3F;
+    color: #FFFFFF;
+}
+.byDateSubmitButton:hover, .byDateSubmitButton:focus {
+    background: #FFFFFF;
+    color: #001F3F;
+}
+.byDateCancelButton {
+    background: #FFFFFF;
+    color: #001F3F;
+}
+.byDateCancelButton:hover, .byDateCancelButton:focus {
+    background: #001F3F;
+    color: #FFFFFF;
+}
+/*************************************/
+
+
+/*********** CONVERTER SECTION***********/
+.converterSection {
+    background-color: #fff;
+    color: #001F3F;
+}
+.converterDate {
+    border-radius: 0;
+    background: #fff;
+    border: 0;
+    border-bottom: 3px solid #001F3F;
+    width: 300px;
+}
+.converterDate:hover {
+    background: #fff;
+}
+.converterFontSection {
+    color: #001F3F;
+    font-size:15px;
+}
+.converterInputs {
+    border-bottom: 3px solid #001F3F;
+    background: #fff;
+    font-size:15px;
+}
+.converterSubmitButton {
+    background: #fff;
+    color: #001F3F;
+}
+.converterSubmitButton:hover, .converterSubmitButton:focus {
+    background: #001F3F;
+    color: #fff;
+}
+.converterCancelButton {
+    background: #fff;
+    color: #001F3F;
+}
+.converterCancelButton:hover, .converterCancelButton:focus {
+    background: #001F3F;
+    color: #fff;
+}
+/*************************************/
+
+.chartButton {
+    background: #111111;
+    color: #0074D9;
+}
+.chartButton:hover, .chartButton:focus {
+    background: #0074D9;
+    color: #111111;
+}
+
+.wrapp {
+    width: 100%;
+    height: 100%;
+}
+.chartElements {
+    padding-right: 20px;
+}
+
+/************SPINNER SECTION*************/
+.spinner {
+    margin: 100px auto;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    font-size: 10px;
+}
+.spinner > div {
+    background-color: #FF4136;
+    height: 100%;
+    width: 6px;
+    display: inline-block;
+
+    -webkit-animation: sk-stretchdelay 1.2s infinite ease-in-out;
+    animation: sk-stretchdelay 1.2s infinite ease-in-out;
+}
+.spinner .rect2 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+.spinner .rect3 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+.spinner .rect4 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+.spinner .rect5 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+@-webkit-keyframes sk-stretchdelay {
+    0%, 40%, 100% { -webkit-transform: scaleY(0.4) }
+    20% { -webkit-transform: scaleY(1.0) }
+}
+@keyframes sk-stretchdelay {
+    0%, 40%, 100% {
+        transform: scaleY(0.4);
+        -webkit-transform: scaleY(0.4);
+    }  20% {
+           transform: scaleY(1.0);
+           -webkit-transform: scaleY(1.0);
+       }
+}
+/*************************************/
+
+
+#predictionTable thead {
+    background: #001F3F;
+    color: #FF4136;
+}
+
+#predictionTable thead:hover {
+    background: #001F3F;
+    color: #FF4136;
+}
+
+
+/*************** INPUTS STARTING STYLINGS ***************/
+.group 			  {
+    position:relative;
+    margin-bottom:45px;
+}
+input 				{
+    font-size:15px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:300px;
+    border:none;
+    border-bottom:1px solid #757575;
+}
+input:focus {
+    outline:none;
+}
+select {
+    font-size:15px;
+    padding:10px 10px 10px 5px;
+    display:block;
+    width:300px;
+    border:none;
+    border-bottom:1px solid #757575;
+}
+select:focus {
+    outline:none;
+}
+
+/* LABEL ======================================= */
+label 				 {
+    color:#999;
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+}
+
+.labelDate {
+    color:#999;
+    font-size:18px;
+    font-weight:normal;
+    position:absolute;
+    pointer-events:none;
+    left:5px;
+    top:10px;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+    display: none;
+}
+
+input:focus ~ .labelDate, input:valid ~ label {
+    top:-20px;
+    font-size:14px;
+    color:#5264AE;
+    display: block;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label 		{
+    top:-20px;
+    font-size:14px;
+    color:#5264AE;
+}
+
+select:focus ~ label, select:valid ~ label 		{
+    top:-20px;
+    font-size:14px;
+    color:#5264AE;
+}
+
+/* BOTTOM BARS ================================= */
+.bar 	{
+    position:relative;
+    display:block;
+    width:300px;
+}
+.bar:before, .bar:after 	{
+    content:'';
+    height:2px;
+    width:0;
+    bottom:1px;
+    position:absolute;
+    background:#5264AE;
+    transition:0.2s ease all;
+    -moz-transition:0.2s ease all;
+    -webkit-transition:0.2s ease all;
+}
+.bar:before {
+    left:50%;
+}
+.bar:after {
+    right:50%;
+}
+
+.converterBar:before, .converterBar:after  {
+    background: #DDDDDD;
+}
+
+.ratesByDatesBar:before, .ratesByDatesBar:after  {
+    background: #85144b;
+}
+
+.chartBar:before, .chartBar:after  {
+    background: #85144b;
+}
+
+.predictionBar:before, .predictionBar:after  {
+    background: #FFFFFF;
+}
+
+/* active state */
+select:focus ~ .bar:before, select:focus ~ .bar:after {
+    width:50%;
+}
+
+/* HIGHLIGHTER ================================== */
+.highlight {
+    position:absolute;
+    height:60%;
+    width:100px;
+    top:25%;
+    left:0;
+    pointer-events:none;
+    opacity:0.5;
+}
+
+/* active state */
+input:focus ~ .highlight {
+    -webkit-animation:inputHighlighter 0.3s ease;
+    -moz-animation:inputHighlighter 0.3s ease;
+    animation:inputHighlighter 0.3s ease;
+}
+
+/* ANIMATIONS ================ */
+@-webkit-keyframes inputHighlighter {
+    from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+}
+@-moz-keyframes inputHighlighter {
+    from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+}
+@keyframes inputHighlighter {
+    from { background:#5264AE; }
+    to 	{ width:0; background:transparent; }
+}
+
+
+/**************** BUTTON **********************/
+.btn {
+    position: relative;
+    display: block;
+    width: 300px;
+    margin: 15px 0;
+    padding: 0;
+    overflow: hidden;
+    border-width: 0;
+    outline: none;
+    border-radius: 2px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .6);
+    transition: background-color .3s;
+}
+
+
+
+.btn > * {
+    position: relative;
+}
+
+.btn span {
+    display: block;
+    padding: 12px 24px;
+}
+
+.btn:before {
+    content: "";
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    display: block;
+    width: 0;
+    padding-top: 0;
+
+    border-radius: 100%;
+
+    background-color: rgba(236, 240, 241, .3);
+
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.btn:active:before {
+    width: 120%;
+    padding-top: 120%;
+
+    transition: width .2s ease-out, padding-top .2s ease-out;
+}
+
+.btn.orange {
+    background-color: #e67e22;
+}
+
+.btn.orange:hover, .btn.orange:focus {
+    background-color: #d35400;
+}
+
+.hidden {
+    visibility:hidden;
+}
+
+.chipsBlock {
+    margin-bottom: 5%;
+    margin-top: 5%;
+}
+
+
+.chip {
+    display: inline-block;
+    padding: 0 25px;
+    height: 50px;
+    font-size: 16px;
+    line-height: 50px;
+    border-radius: 25px;
+    background-color: #f1f1f1;
+    margin-left: 5%;
+    color: #111111;
+}
+
+.chip img {
+    float: left;
+    margin: 0 10px 0 -25px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border-right: 1px solid;
+}
+
+
+/* ********************** */
+#loader-container {
+    width: 200px;
+    height: 200px;
+    color: white;
+    margin-top: 15%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #3498db;
+    border-radius: 50%;
+    -webkit-animation: borderScale 1s infinite ease-in-out;
+    animation: borderScale 1s infinite ease-in-out;
+}
+
+#loadingText {
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 2em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes borderScale {
+    0% {
+        border: 5px solid white;
+    }
+    50% {
+        border: 25px solid #3498db;
+    }
+    100% {
+        border: 5px solid white;
+    }
+}
+
+@keyframes borderScale {
+    0% {
+        border: 5px solid white;
+    }
+    50% {
+        border: 25px solid #3498db;
+    }
+    100% {
+        border: 5px solid white;
+    }
+}
+/* *************************** */
+
+
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #333; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar.
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
